@@ -1,0 +1,95 @@
+@CHARSET "UTF-8";
+
+/**********通用显示**********/ /*显示错误提示信息*/
+div.errorMessages {
+	
+}
+fieldset.manage{
+	width: 350px;
+	padding-left: 15px;	
+}
+fieldset.manage a{
+	padding-right: 7px;	
+}
+
+/*表单显示与列表显示的table*/
+table.form,table.list {
+	border: 1px solid #7BBDFF;
+	border-collapse: collapse;
+	width: 90%;
+}
+
+table.form th,table.form td,table.list th,table.list td {
+	border: 1px solid #7BBDFF;
+	padding: 2px 5px 2px 5px;
+	font-family: "宋体";
+	font-size: 12px;
+}
+
+/**********表单显示**********/ /*字段标题td*/
+table.form td.label {
+	width: 100px;
+}
+
+/*字段td*/
+table.form td.field {
+	
+}
+
+/*显示单行文本输入框*/ /*不能使用input[type="text"]？？*/
+table.form td.field .input1 {
+	width: 500px;
+}
+
+table.form td.field .input2 {
+	width: 200px;
+}
+
+table.form td.field textarea {
+	width: 500px;
+	height: 150px;
+}
+
+/*提交按钮显示*/
+table.form tr.func_list td {
+	padding-left: 40%;
+}
+
+table.form tr.func_list td {
+	font-size: 14px;
+}
+
+/*********用table显示过滤参数*********/
+table.filter_form {
+	border: 1px solid #7BBDFF;
+	border-collapse: collapse;
+}
+
+table.filter_form th,table.filter_form td {
+	padding: 2px 5px 2px 5px;
+	font-family: "宋体";
+	font-size: 12px;
+}
+
+/*********用table显示数据列表*********/ /*表头*/
+table.list tr.head th {
+	background-color: #E1F2FA;
+	color: #002876;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+/*显示数据项*/
+table.list tr.item {
+	
+}
+
+/*表格最下一行的功能按钮显示行*/
+table.list tr.func_list td {
+	font-size: 14px;
+}
+
+/*功能按钮*/
+table.list tr.func_list input[type="button"] {
+	
+}

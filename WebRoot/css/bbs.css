@@ -1,0 +1,145 @@
+/* CSS Document */
+/*#########################所有页面公共CSS#######################################*/
+body{
+/*width:1220px;*/
+font-family:"Tahoma", "宋体";
+}
+table{
+text-align:center;
+}
+th{
+font-family:cursive;
+font-size:18px;
+color:#01A3BC;
+height:25px;
+}
+tr{
+font-family:新宋体;
+font-size:16px;
+height:33px;
+}
+hr{
+color:#A8F9F2;
+}
+b{
+color:#FFAB22;
+}
+a{
+text-decoration:none;
+color:blue;
+}
+a:hover{
+color:red;
+text-decoration:underline;
+}
+
+/*#########################后台页面CSS开始#######################################*/
+   /************************后台管理主页面**********************************/
+#pageTop{
+width:100%;
+/*background-color:#009999;*/
+}
+#middle{
+width:100%;
+clear:both;
+}
+#navigation{
+width:10%;
+font-size:16px;
+float:left;
+list-style-type:none;
+margin-left:5px;
+background-color:#E1F2FA;
+margin-top:20px;
+color:#03f;
+}
+
+#navigation li{
+margin-bottom:10px;
+}
+/*只有firefox支持*/
+/*
+#navigation li:hover{ 
+	text-decoration:underline;
+	cursor:pointer;
+}*/
+
+#content{
+position:relative;
+width:89%;
+float:right;
+border:0;
+border-left:1px solid #A1BBDC;
+text-align:center;
+}
+#pageBottom{
+position:relative;
+width:100%;
+height:40px;
+/*background-color:#00CC99;*/
+clear:both;
+}
+	/************************板块管理**********************************/
+#forumList{
+/*margin-top:8px;*/
+}
+table{
+border-collapse:separator;
+width:100%;
+/*width:100%;*/
+border-spacing:0 3px;
+}
+table thead{
+background-color:#F7F7F7;
+}
+table tbody{
+background-color:#F4FBFE;
+}
+table #lastTr{
+background-color:#A2CFE6;
+}
+/*tr.selected之间不能有空格，否则表示tr下级元素中是否有类名为selected的*/
+tr.selected,tr.checked{
+background-color:#FFFFa1;
+}
+th{
+border-bottom:2px solid #9BCAE2;
+}
+td{
+border-bottom:1px solid #9ECDE4;
+}
+#fenye{
+width:100%;
+background-color:#E1F2FA;
+padding-left:8px;
+margin:0;
+font-size:15px;
+}
+.enable{
+color:green;
+}
+.disable{
+color:red;
+}
+	/************************帖子管理**********************************/
+#forumCascadeList{
+display:none;
+}
+#searchTheme{
+/*margin-left:40%;
+*margin-left:50%;*/
+float:right;
+}
+#themeList{
+clear:both;
+}
+#moveTheme{
+font-style:italic;
+color:#ccc;
+}
+/*#########################后台页面CSS结束#######################################*/
+/*#########################前台页面CSS开始#######################################*/
+
+/*#########################前台页面CSS结束#######################################*/
+
+

@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+body {
+	color: #5F5F5F;
+	font-family: "Tahoma", "宋体";
+	font-size: 12px;
+	text-align: left;
+}
+
+.red {
+	color: red;
+}
+
+.error {
+	color: red;
+}
+
+.normal {
+	
+}
+
+a:active,a:hover {
+	font-family: "Tahoma", "Arial", "宋体";
+	text-decoration: underline;
+}
+
+a:link,a:visited {
+	color: #3766AC;
+	font-family: "Tahoma", "Arial", "宋体";
+	text-decoration: none;
+}
+
+.errorMessages {
+	color: red;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/*pageView*/
+.pageview .currentpage {
+	color: #FF0000;
+}
+
+/*bottom*/
+#Oaks {
+	background: #FDFDF9 none repeat scroll 0 0;
+	border: 1px solid #E3E3E3;
+	clear: both;
+	color: #E3E3E3;
+	height: 40px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0 10px;
+	width: 978px;
+}
+
+#Oaks div {
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	overflow: hidden;
+}
+
+#Oaks div span {
+	margin: 0 30px;
+}
+
+#webFooter {
+	clear: both;
+	color: #8D8D8D;
+	margin: 15px auto;
+	padding-top: 5px;
+	text-align: center;
+	width: auto;
+}
+
+#webFooter p {
+	line-height: 30px;
+}
+
+#bbstitle {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	width: 1000px;
+}

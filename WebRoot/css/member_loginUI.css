@@ -1,0 +1,109 @@
+@charset
+"utf-8"
+;
+
+body {
+    color: #000000;
+    font-family: "Tahoma", "宋体";
+    font-size: 12px;
+    text-align: left;
+}
+
+body, div, ol, ul, li, table, td, p, font, form, input, select, textarea {
+    color: #474747;
+    font-family: "宋体";
+    font-size: 12px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, form, div, p, i, img, ul, li, ol, table, tr, td, fieldset, label, legend {
+    margin: 0;
+    padding: 0;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+}
+
+.topt {
+    border-bottom: 1px solid #E9E9E9;
+    margin: 0 auto;
+    padding: 0 20px 7px;
+    width: 920px;
+}
+
+.topt .sm {
+    color: #525252; /*float:left;*/
+    padding: 2px 0 0 5px;
+    font-size: 14px;
+}
+
+.toppic {
+    background: transparent url( /img/z_01.jpg ) no-repeat scroll 0 0;
+    float: left;
+    height: 42px;
+    padding: 8px;
+    width: 42px;
+}
+
+.userinfor {
+    color: #515151;
+    float: left;
+    line-height: 23px;
+    padding-left: 10px;
+    width: 290px;
+}
+
+.userinfor h3 {
+    font-size: 14px;
+}
+
+.table {
+    color: #5F5F5F;
+    margin: 0 auto;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+}
+
+td {
+    display: table-cell;
+    padding: 1px;
+    text-align: inherit;
+    vertical-align: inherit;
+}
+
+.table td {
+    height: 35px;
+    padding-right: 7px;
+}
+
+a:link {
+    color: #3768AD;
+    font-family: "Tahoma", "宋体";
+    text-decoration: none;
+}
+
+.table .inputk {
+    border: 1px solid #C3C7C6;
+    height: 18px;
+    line-height: 18px;
+    width: 193px;
+}

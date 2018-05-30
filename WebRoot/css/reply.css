@@ -1,0 +1,80 @@
+#回帖列表页面样式
+body{
+font-size:16px;
+}
+.replyList{
+width:99%;
+height:auto;
+margin-left:auto;
+margin-right:auto;
+border:solid 3px #ccc;
+}
+
+.user_message{
+width:25%;
+height:auto;
+float:left;
+border:solid 1px #ccc;
+}
+.user_message ul{
+padding:0;
+margin:0;
+list-style-type:none;
+text-align:left;
+padding-left:10px;
+color:#059;
+}
+.theme_detail{
+width:73%;
+float:right;
+border:solid 1px #ccc;
+}
+
+.theme_detail .statusBar{
+height:40px;
+background-color:#9ECDE4;
+}
+
+.theme_detail .theme_content{
+min-height:200px;
+word-wrap:break-word;
+}
+
+.statusBar span,#hr span{
+margin-right:6px;
+color:#069;
+}
+
+#hr{
+display:block;
+clear:both;
+height:20px;
+background-color:#AABBEF;
+margin:0;
+}
+#fenye{
+clear:both;
+text-align:center;
+font-size:12px;
+margin:0;
+}
+#hr ul{
+border:solid 1px #ccc;
+font-size:14px;
+display:none;
+background-color:#ccc;
+text-align:left;
+list-style-type:none;
+padding:0;
+margin:0;
+width:auto;
+position:absolute;
+z-index:200;
+}
+
+#hr ul li{
+line-height:20px;
+cursor:pointer;
+color:blue;
+width:90px;
+}

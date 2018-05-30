@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+<!-- ======================formbean的定义位置 ========================== -->
+    <form-beans>
+      <form-bean name="userform" type="cn.yang.web.formbean.UserForm"></form-bean>
+      <form-bean name="forumform" type="cn.yang.web.formbean.ForumForm"></form-bean>
+      <form-bean name="themeform" type="cn.yang.web.formbean.ThemeForm"></form-bean>
+      <form-bean name="fileform" type="cn.yang.web.formbean.FileForm"></form-bean>
+      <form-bean name="replyform" type="cn.yang.web.formbean.ReplyForm"></form-bean>
+      <form-bean name="roleform" type="cn.yang.web.formbean.RoleForm"></form-bean>
+      <form-bean name="configform" type="cn.yang.web.formbean.ConfigForm"></form-bean>
+    </form-beans>
+	<global-exceptions>
+		<exception key="PermissionDeniedException" type="cn.yang.bbs.exception.PermissionDeniedException"
+			path="/exception.do?method=permissionDenied">
+		</exception><!--
+		<exception key="exception" type="java.lang.Exception" path="/exception.do?method=showMessage"></exception>
+	--></global-exceptions>
+<!-- =======================global-forward的定义位置 ====================-->
+<global-forwards>
+  <forward name="index" path="/index.do" redirect="true"></forward>
+  <forward name="message" path="/WEB-INF/page/share/message.jsp"></forward>
+  <forward name="error" path="/WEB-INF/page/share/error.jsp"></forward>
+</global-forwards>
+<!-- ======================action的定义位置============================= -->
+ <action-mappings>
+ <!--##########################后台管理Action######################################-->
+<!-- 进入后台管理主页面 -->
+<action path="/control/center" forward="/WEB-INF/page/controlcenter/main.jsp"/>
+
+<!-- 异常处理 -->
+<action path="/exception" parameter="method">
+	<forward name="showMessage" path="/WEB-INF/page/exception/showMessage.jsp"></forward>
+	<forward name="permissionDenied" path="/WEB-INF/page/exception/permissionDenied.jsp"></forward>
+</action>
+		
+<!-- 会员管理-->
+<action path="/manage/user" parameter="method" name="userform" scope="request" validate="false">
+	<forward name="list" path="/WEB-INF/page/user/list.jsp" />
+	<forward name="selectRolesUI" path="/WEB-INF/page/user/selectRolesUI.jsp" />
+	<forward name="toList" path="/manage/user.do?method=list" redirect="true" />
+</action>
+ <!-- ============================版块管理==================================== -->
+<!-- 显示forum分页数据页面 -->
+<action path="/control/forum/list" name="forumform" scope="request">
+   <forward name="list" path="/WEB-INF/page/forum/forumList.jsp"></forward>
+   <forward name="simpleList" path="/WEB-INF/page/forum/simpleForumList.jsp"></forward>
+   <forward name="simpleList_for_other" path="/WEB-INF/page/forum/simpleForumList_for_other.jsp"></forward>
+</action>
+
+<!-- 通过AJAX请求得到子版块列表 -->
+<action path="/ajax/forum/cascade/list" name="forumform" scope="request" parameter="method">
+   <forward name="childforums" path="/WEB-INF/page/forum/childforums.jsp"></forward>
+</action>
+
+<!-- 版块操作页面 -->
+<action path="/control/forum/manage" name="forumform" scope="request" parameter="method">
+   <forward name="addUI" path="/WEB-INF/page/forum/addForum.jsp"></forward>
+   <forward name="findUI" path="/WEB-INF/page/forum/findForum.jsp"></forward>
+   <forward name="updateUI" path="/WEB-INF/page/forum/updateForum.jsp"></forward>
+   <forward name="addModeratorUI" path="/WEB-INF/page/forum/addModerator.jsp"></forward>
+</action>
+ <!-- ============================帖子管理==================================== -->
+<!--显示theme分页数据页面 -->
+<action path="/control/theme/list" name="themeform" scope="request">
+   <forward name="list" path="/WEB-INF/page/theme/themeList.jsp"></forward>
+</action>
+
+<!-- 帖子操作页面 -->
+<action path="/control/theme/manage" name="themeform" scope="request" parameter="method">
+   <forward name="addUI" path="/WEB-INF/page/theme/addTheme.jsp"></forward>
+   <forward name="editUI" path="/WEB-INF/page/theme/editTheme.jsp"></forward>
+   <forward name="showUI" path="/WEB-INF/page/theme/themeContent.jsp"></forward>
+</action>
+
+<!-- ============================上传附件管理==================================== -->
+<!--保存附件Action -->
+<action path="/upload/file" name="fileform" scope="request">
+   <forward name="result" path="/WEB-INF/page/uploadfile/result.jsp"></forward>
+</action>
+<!--删除附件Action -->
+<action path="/delete/file" name="fileform" scope="request">
+</action>
+
+<!-- ============================回帖管理==================================== -->
+<!--显示reply分页数据页面 -->
+<action path="/control/reply/list" name="replyform" scope="request">
+   <forward name="list" path="/WEB-INF/page/reply/replyList.jsp"></forward>
+</action>
+<!-- 回帖操作页面 -->
+<action path="/control/reply/manage" name="replyform" scope="request" parameter="method">
+<forward name="saveUI" path="/WEB-INF/page/reply/postReply.jsp"></forward>
+<forward name="editUI" path="/WEB-INF/page/reply/editReply.jsp"></forward>
+</action>
+
+<!-- ============================权限管理==================================== -->
+<action path="/manage/role" parameter="method" name="roleform" scope="request" validate="false">
+	<forward name="list" path="/WEB-INF/page/role/list.jsp" />
+	<forward name="saveUI" path="/WEB-INF/page/role/saveUI.jsp" />
+	<forward name="toList" path="/manage/role.do?method=list" redirect="true" />
+</action>
+
+<!-- ============================后台配置==================================== -->
+<action path="/manage/config"  parameter="method" name="configform" scope="request">
+	<forward name="configUI" path="/WEB-INF/page/config/config.jsp" />
+</action>
+<!-- ============================跳转到某页面==================================== -->
+<action path="/getpage/upload" forward="/WEB-INF/page/uploadfile/upload.jsp"></action>
+
+
+
+
+
+ <!--##########################前台管理Action######################################-->
+ <!-- 用户 -->
+<action path="/user" parameter="method" name="userform" scope="request" validate="false">
+	<forward name="regUserUI" path="/WEB-INF/page/user/regUserUI.jsp"></forward>
+	<forward name="loginUI" path="/WEB-INF/page/user/loginUI.jsp"></forward>
+	<forward name="editUI" path="/WEB-INF/page/user/editUserUI.jsp"></forward>
+	<forward name="userUI" path="/WEB-INF/page/user/showUserUI.jsp"></forward>
+	<forward name="changePasswordUI" path="/WEB-INF/page/user/changePasswordUI.jsp"></forward>
+</action>
+ <!-- ============================版块==================================== -->
+ <!-- 进入首页 -->
+<action path="/index" name="forumform" scope="request">
+ <forward name="list" path="/WEB-INF/page/forum/front/forums.jsp"></forward>
+ <forward name="simpleList_for_other" path="/WEB-INF/page/forum/front/simpleForumList_for_other.jsp"></forward>
+</action>
+
+<!-- 通过AJAX请求得到版块下帖子的相关信息 -->
+<action path="/ajax/forum/theme/message" name="forumform" scope="request" parameter="method">
+   <forward name="themeMessage" path="/WEB-INF/page/theme/themeMessage.jsp"></forward>
+</action>
+
+<!-- ============================帖子==================================== -->
+<action path="/get/forum/theme" name="themeform" scope="request">
+ <forward name="list" path="/WEB-INF/page/theme/front/themes.jsp"></forward>
+ <forward name="queryResult" path="/WEB-INF/page/theme/front/searchThemes.jsp"></forward>
+</action>
+
+<!-- 帖子操作页面 -->
+<action path="/theme/manage" name="themeform" scope="request" parameter="method">
+   <forward name="showUI" path="/WEB-INF/page/theme/front/themeContent.jsp"></forward>
+   <forward name="addUI" path="/WEB-INF/page/theme/front/postTheme.jsp"></forward>
+   <forward name="editUI" path="/WEB-INF/page/theme/front/editTheme.jsp"></forward>
+   <forward name="toList" path="/get/forum/theme.do"></forward>
+   <forward name="queryUI" path="/WEB-INF/page/theme/front/searchThemes.jsp"></forward>
+</action>
+
+<!--显示reply分页数据页面 -->
+<action path="/reply/list" name="replyform" scope="request">
+   <forward name="list" path="/WEB-INF/page/reply/front/replyList.jsp"></forward>
+</action>
+
+<!-- 回帖操作页面 -->
+<action path="/reply/manage" name="replyform" scope="request" parameter="method">
+   <forward name="postUI" path="/WEB-INF/page/reply/front/postReply.jsp"></forward>
+   <forward name="editUI" path="/WEB-INF/page/reply/front/editReply.jsp"></forward>
+   <forward name="themeList" path="/theme/manage.do?method=showContent"></forward>
+</action>
+
+<!-- 网站一般信息 -->
+<action path="/index/siteinfo"  forward="/WEB-INF/page/info/website.jsp"/>
+ </action-mappings>
+<!-- ============================================= Controller Configuration -->
+<!-- 由spring 的ioc 容器管理Action实例 -->
+<controller>
+	<!-- <set-property property="processorClass" value="org.springframework.web.struts.DelegatingRequestProcessor" /> -->
+	<!-- 通过扩展的RequestProcessor增加权限检查的功能 -->
+	<set-property property="processorClass" value="cn.yang.web.PrivilegeInterceptorDelegatingRequestProcessor" />
+	<set-property property="nocache" value="true" />
+</controller>
+
+<message-resources parameter="cn.yang.web.ApplicationResources"/>
+</struts-config>
+

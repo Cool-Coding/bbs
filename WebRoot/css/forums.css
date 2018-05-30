@@ -1,0 +1,123 @@
+  /************************首页版块列表**********************************/
+body{
+	font-family:"Tahoma", "宋体";
+	padding:0px;
+	margin:0px;
+	font-size:14px;
+}
+a{
+text-decoration:none;
+color:blue;
+}
+a:hover{
+color:red;
+text-decoration:underline;
+}
+
+.outDiv{
+width:1000px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.user_messg{
+text-align:left;
+height:35px;
+margin-top:10px;
+border:solid 1px #ccc;
+line-height:35px;
+}
+
+.fenye{
+font-size:12px;
+float:left;
+margin-right:10px;
+clear:both;
+ }
+
+.function table{
+margin-top:10px;
+text-align:left;
+width:100%;
+/*border:solid 1px #0066FF;*/
+}
+
+.function_title{
+font-weight:bold;
+height:30px;
+line-height:30px;
+background-color:#0089E2;
+/*background-color:#E1F2FA;*/
+color:#00ffff;
+}
+.td1,.th1{
+border:solid 1px #ccc;
+border-top:none;
+border-right:none;
+height:50px;
+}
+
+.td2,.th2{
+border:solid 1px #ccc;
+border-top:none;
+border-right:none;
+border-left:none;
+}
+
+.td3,.th3{
+border:solid 1px #ccc;
+border-top:none;
+border-left:none;
+text-align:center;
+}
+.td3{
+font-size:13px;
+}
+.th1,.th2,.th3{
+text-align:center;
+height:30px;
+color:#225509;
+}
+#bbsnav {
+	text-align:left;
+	height:25px;
+	/*margin-top:10px;*/
+	border:solid 1px #ccc;
+	line-height:35px;
+	/*background: transparent url('/bbs/img/bbs_menu_bg.PNG') no-repeat scroll 0 0;*/
+	background-color:#A4D1E7;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#bbsnav ul {
+	margin-left: 20px;
+}
+
+#bbsnav ul li {
+	float: left;
+	font-size: 14px;
+	height: 21px;
+	line-height: 21px;
+	text-align: center;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+}
+
+#bbsnav ul li a {
+	float: left;
+	font-size: 14px;
+	height: 21px;
+	line-height: 21px;
+}
+
+#bbsnav ul li.line {
+	background: transparent url('/bbs/img/bbsnavline.gif' ) no-repeat scroll center center;
+	height: 23px;
+	width: 30px;
+}
+
+.selected{
+background-color:#E8F3FD;
+}

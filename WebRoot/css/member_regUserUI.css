@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+body {
+	color:#000000;
+	font-family:"Tahoma", "宋体";
+	font-size:12px;
+	text-align:left;
+}
+body, div, ol, ul, li, table, td, p, font, form, input, select, textarea {
+	color:#474747;
+	font-family:"宋体";
+	font-size:12px;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+h1, h2, h3, h4, h5, h6, form, div, p, i, img, ul, li, ol, table, tr, td, fieldset, label, legend {
+	margin:0;
+	padding:0;
+}
+tbody {
+	display:table-row-group;
+	vertical-align:middle;
+}
+tr {
+	display:table-row;
+	vertical-align:inherit;
+}
+.topt {
+	border-bottom:1px solid #E9E9E9;
+	margin:0 auto;
+	padding:0 20px 7px;
+	width:920px;
+}
+.topt .sm {
+	color:#525252;
+/*	float:left;*/
+	padding:2px 0 0 5px;
+	font-size: 14px;
+}
+.f14 {
+	font-size:14px;
+}
+.blank16 {
+	clear:both;
+	font-size:1px;
+	height:16px;
+	overflow:hidden;
+}
+.table {
+	color:#5F5F5F;
+	margin:0 auto;
+}
+.table td {
+	height:35px;
+	padding-right:7px;
+}
+.table .inputk {
+	border:1px solid #C3C7C6;
+	height:18px;
+	line-height:18px;
+	width:193px;
+}
+.table .infor {
+	background:transparent url(/img/z_01.gif) no-repeat scroll 0 0;
+	color:#7B7C7E;
+	height:30px;
+	line-height:30px;
+	padding-left:10px;
+}
+.table .infor span {
+	background:transparent url(/img/z_01.gif) no-repeat scroll right top;
+	float:right;
+	height:30px;
+	width:10px;
+}

@@ -1,0 +1,47 @@
+.border{
+border:1px solid #00f;
+}
+INPUT {
+	-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;
+}
+INPUT {
+	PADDING-BOTTOM: 1px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; VERTICAL-ALIGN: middle; PADDING-TOP: 3px
+}
+
+#wrap {
+	TEXT-ALIGN: center
+}
+#preImg {
+	MARGIN: 40px auto 0px; WIDTH: 640px; HEIGHT: 400px
+	clear:both;
+}
+#preImg IMG {
+	BORDER-BOTTOM: #000 2px solid; BORDER-LEFT: #000 2px solid; BORDER-TOP: #000 2px solid; BORDER-RIGHT: #000 2px solid;
+}
+#login {
+	MARGIN-TOP: 10px
+	clear:both;
+}
+
+SELECT {
+	HEIGHT: 22px; VERTICAL-ALIGN: bottom
+}
+#login .input-text {
+	HEIGHT: 14px; MARGIN-LEFT: 2px; MARGIN-RIGHT: 4px
+}
+#login SPAN {
+	FONT-SIZE: 14px
+}
+#id {
+	WIDTH: 100px
+}
+#pwd {
+	WIDTH: 100px; FONT-SIZE: 12px
+}
+
+#footer {
+	TEXT-ALIGN: center; MARGIN: 20px 15px 0px 10px; CLEAR: both
+}
+#footer .footer_message {
+	MARGIN: 10px auto; PADDING-LEFT: 60px; WIDTH: 550px; COLOR: #666666; FONT-SIZE: 11px
+}
