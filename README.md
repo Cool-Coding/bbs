@@ -40,5 +40,5 @@
 - 用户操作行为记录
 ## 源码下载使用:
 - 配置数据库连接、用户名、密码
-- 运行cn.yang.init.InitPrivilegeAndRoleAndUser.java类中的两个方法，初始化权限及超级管理员用户
+- 运行cn.yang.init.InitPrivilegeAndRoleAndUser.java类中的init方法，初始化权限、角色及增加超级管理员用户
 - 部署到Tomcat中运行
