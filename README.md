@@ -53,6 +53,7 @@
 - 版块列表  
 ![版块列表](https://github.com/Cool-Coding/photos/blob/master/bbs/framelist.png)  
 
+- 发表贴子  
 ![发表贴子](https://github.com/Cool-Coding/photos/blob/master/bbs/theme_post.png)  
 
 
