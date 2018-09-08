@@ -48,7 +48,7 @@
 ### 前台
 
 - 首页  
-![首页](https://github.com/Cool-Coding/photos/blob/master/bbs/bbs01.png)  
+![首页](https://github.com/Cool-Coding/photos/blob/master/bbs/index.png)  
 
 - 版块列表  
 ![版块列表](https://github.com/Cool-Coding/photos/blob/master/bbs/framelist.png)  
@@ -69,3 +69,5 @@
 
 ![角色管理2](https://github.com/Cool-Coding/photos/blob/master/bbs/role2.png)  
 
+- 系统配置  
+![系统配置](https://github.com/Cool-Coding/photos/blob/master/bbs/setting.png)  
