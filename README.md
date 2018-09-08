@@ -47,8 +47,10 @@
 
 ### 前台
 
+- 首页  
 ![首页](https://github.com/Cool-Coding/photos/blob/master/bbs/bbs01.png)  
 
+- 版块列表  
 ![版块列表](https://github.com/Cool-Coding/photos/blob/master/bbs/framelist.png)  
 
 ![发表贴子](https://github.com/Cool-Coding/photos/blob/master/bbs/theme_post.png)  
@@ -56,10 +58,12 @@
 
 ### 后台  
 
+- 版块管理  
 ![版块管理1](https://github.com/Cool-Coding/photos/blob/master/bbs/bbs02.png)  
  
 ![版块管理2](https://github.com/Cool-Coding/photos/blob/master/bbs/bbs03.png)  
 
+- 角色管理
 ![角色管理1](https://github.com/Cool-Coding/photos/blob/master/bbs/role1.png)  
 
 ![角色管理2](https://github.com/Cool-Coding/photos/blob/master/bbs/role2.png)  
